@@ -91,7 +91,7 @@ const NewsletterValueSection = () => {
         </div>
 
         {/* Content Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
           {/* Left Side - Content */}
           <div className="space-y-8">
             <h3 className="text-white text-3xl font-bold leading-tight">
@@ -114,7 +114,7 @@ const NewsletterValueSection = () => {
 
           {/* Right Side - Visual */}
           <div className="relative">
-            <div className="bg-black/20 backdrop-blur-xl rounded-2xl p-8 border border-white/25 shadow-2xl">
+            <div className="bg-black/20 backdrop-blur-xl rounded-2xl p-0 border border-white/25 shadow-2xl">
               {/* Mock Interface */}
               <div className="aspect-video rounded-xl overflow-hidden relative" style={{ background: 'linear-gradient(to bottom right, #ffc300, #d97706)' }}>
                 {/* Header Bar */}
@@ -219,14 +219,8 @@ const NewsletterValueSection = () => {
                 </div>
 
                 {/* Join CTA Overlay */}
-                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-black/80 backdrop-blur-sm rounded-lg px-4 py-2 text-center">
-                    <div className="flex items-center justify-center gap-2">
-                      <span className="text-white text-sm font-medium">JOIN THE</span>
-                      <span className="text-lg font-bold" style={{ color: '#ffc300' }}>MONEY MAP</span>
-                    </div>
-                  </div>
-                </div>
+               
+                
               </div>
             </div>
           </div>
@@ -244,4 +238,4 @@ const NewsletterValueSection = () => {
   );
 };
 
-export default NewsletterValueSection; 
+export default NewsletterValueSection;
