@@ -34,13 +34,13 @@ const NewsletterMonetizationCopy = () => {
             <div className="absolute inset-0 rounded-2xl blur-md opacity-20" style={{ boxShadow: '0 0 40px #ffc300' }}></div>
             
             {/* Main content card */}
-            <div className="relative bg-black/20 backdrop-blur-xl rounded-2xl p-8 md:p-12 shadow-2xl" style={{ border: '2px solid rgba(255, 195, 0, 0.4)', boxShadow: '0 0 20px rgba(255, 195, 0, 0.15)' }}>
+            <div className="relative bg-black/20 backdrop-blur-xl rounded-2xl p-8 md:p-12 border border-white/25 shadow-2xl">
               <div className="space-y-8">
                 <p className="text-white text-xl md:text-2xl leading-relaxed font-medium">
                   The new way of newsletter monetization is simple:
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
                   <div className="text-center p-6 bg-white/5 rounded-xl border border-white/10">
                     <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-yellow-400/20 flex items-center justify-center">
                       <span className="text-yellow-400 text-2xl font-bold">1</span>
@@ -60,14 +60,6 @@ const NewsletterMonetizationCopy = () => {
                   <div className="text-center p-6 bg-white/5 rounded-xl border border-white/10">
                     <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-yellow-400/20 flex items-center justify-center">
                       <span className="text-yellow-400 text-2xl font-bold">3</span>
-                    </div>
-                    <h3 className="text-white text-lg font-semibold mb-2">Launch Irresistible Offer(s)</h3>
-                    <p className="text-gray-400 text-sm">Products and services your audience can't wait to buy</p>
-                  </div>
-                  
-                  <div className="text-center p-6 bg-white/5 rounded-xl border border-white/10">
-                    <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-yellow-400/20 flex items-center justify-center">
-                      <span className="text-yellow-400 text-2xl font-bold">4</span>
                     </div>
                     <h3 className="text-white text-lg font-semibold mb-2">Multiple Income Streams</h3>
                     <p className="text-gray-400 text-sm">Revenue sources that don't depend on massive audiences</p>
