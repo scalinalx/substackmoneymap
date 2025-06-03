@@ -40,7 +40,7 @@ const NewsletterMonetizationCopy = () => {
                   The new way of newsletter monetization is simple:
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
                   <div className="text-center p-6 bg-white/5 rounded-xl border border-white/10">
                     <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-yellow-400/20 flex items-center justify-center">
                       <span className="text-yellow-400 text-2xl font-bold">1</span>
@@ -60,6 +60,14 @@ const NewsletterMonetizationCopy = () => {
                   <div className="text-center p-6 bg-white/5 rounded-xl border border-white/10">
                     <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-yellow-400/20 flex items-center justify-center">
                       <span className="text-yellow-400 text-2xl font-bold">3</span>
+                    </div>
+                    <h3 className="text-white text-lg font-semibold mb-2">Launch Irresistible Offer(s)</h3>
+                    <p className="text-gray-400 text-sm">Products and services your audience can't wait to buy</p>
+                  </div>
+                  
+                  <div className="text-center p-6 bg-white/5 rounded-xl border border-white/10">
+                    <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-yellow-400/20 flex items-center justify-center">
+                      <span className="text-yellow-400 text-2xl font-bold">4</span>
                     </div>
                     <h3 className="text-white text-lg font-semibold mb-2">Multiple Income Streams</h3>
                     <p className="text-gray-400 text-sm">Revenue sources that don't depend on massive audiences</p>
