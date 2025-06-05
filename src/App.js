@@ -13,6 +13,8 @@ import PricingComp2 from './components/PricingComp2';
 import BannerText1 from './components/bannertext1';
 import WhoThisIsForSection from './components/WhoThisIsForSection';
 import GrowthStorySection from './components/GrowthStorySection';
+import WhatYoullGetSection from './components/WhatYoullGetSection';
+import Testimonial4 from './components/testimonial4';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <NewsletterValueSection />
       <WhoThisIsForSection/>
       <GrowthStorySection/>
+      <WhatYoullGetSection/>
+      <Testimonial4/>
       <PricingComp2/>
     </div>
   );
