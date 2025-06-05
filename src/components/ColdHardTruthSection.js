@@ -5,27 +5,27 @@ const ColdHardTruthSection = () => {
   const outdatedTactics = [
     {
       icon: User,
-      text: "Being told to post selfies"
+      text: "Writing only when you feel inspired"
     },
     {
       icon: MessageCircle,
-      text: "Joining engagement pods"
+      text: "Covering random topics with no focus"
     },
     {
       icon: Clock,
-      text: "Posting 3x a day"
+      text: "Never asking for paid subscriptions"
     },
     {
       icon: Megaphone,
-      text: "Announcing office wins"
+      text: "Only creating free content forever"
     },
     {
       icon: Type,
-      text: "Writing without formatting"
+      text: "Ignoring email lists completely"
     },
     {
       icon: TrendingDown,
-      text: "Using outdated sales tactics"
+      text: "Copying others without understanding why"
     }
   ];
 

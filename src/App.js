@@ -17,6 +17,8 @@ import WhatYoullGetSection from './components/WhatYoullGetSection';
 import Testimonial4 from './components/testimonial4';
 import OldVsNewWaySection from './components/OldVsNewWaySection';
 import ColdHardTruthSection from './components/ColdHardTruthSection';
+import FAQSection from './components/FAQSection';
+import FooterSection from './components/FooterSection';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
       <PricingComp2/>
       <OldVsNewWaySection/>
       <ColdHardTruthSection/>
+      <FAQSection/>
+      <FooterSection/>
     </div>
   );
 }
