@@ -12,7 +12,7 @@ const HeroSection = () => {
             </div>
           ))}
         </div>
-        <span className="text-gray-300 text-sm ml-4">Join 500+ Students including 10 LinkedIn Top Voices</span>
+        <span className="text-gray-300 text-sm ml-4">Join 250+ Students including 12 Substack Bestsellers</span>
       </div>
       
       <h1 className="text-white text-6xl font-bold mb-6 leading-tight max-w-5xl mx-auto">

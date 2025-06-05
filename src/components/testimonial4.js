@@ -204,6 +204,19 @@ const Testimonial4 = () => {
             Start building your newsletter revenue machine today
           </p>
         </div>
+
+        {/* Revenue Hero Section */}
+        <div className="mt-20 text-center max-w-5xl mx-auto">
+          {/* Main Headline */}
+          <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+            Turn Your Newsletter Into a <span className="text-yellow-400">$120K+/Year</span> Revenue Machine & Master the NEW Way to <span className="text-yellow-400">Monetize Content</span>.
+          </h1>
+          
+          {/* Subheadline */}
+          <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-4xl mx-auto">
+            Discover the proven frameworks, monetization strategies and exact systems you'll need to become a top 1% newsletter creator and build a six-figure business with <span className="text-yellow-400 font-semibold">Newsletter Money Map</span>.
+          </p>
+        </div>
       </div>
     </div>
   );

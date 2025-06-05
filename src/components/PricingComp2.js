@@ -82,6 +82,8 @@ const PricingComp2 = () => {
         {/* Pricing Section */}
         <div id="pricing" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
+            <h2 className="text-white text-4xl font-bold mb-4">Becoming a Substack Bestseller is now easier than ever</h2>
+            <h2 className="text-yellow-400 text-4xl font-bold mb-4">With Substack Money Map</h2>
             <h2 className="text-white text-4xl font-bold mb-4">Choose Your Path to Success</h2>
             <p className="text-gray-300 text-xl max-w-3xl mx-auto">
               Select the plan that best fits your goals and start your journey to newsletter success

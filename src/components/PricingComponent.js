@@ -72,7 +72,7 @@ const PricingComponent = () => {
                 </div>
               ))}
             </div>
-            <span className="text-gray-300 text-sm ml-4">Join 500+ Students including 10 LinkedIn Top Voices</span>
+            <span className="text-gray-300 text-sm ml-4">Join 250+ Students including 12 Substack Bestsellers</span>
           </div>
           
           <h1 className="text-white text-6xl font-bold mb-6 leading-tight max-w-5xl mx-auto">
@@ -80,7 +80,7 @@ const PricingComponent = () => {
             <span className="text-yellow-400">6-Figure Business</span> in 90 Days
           </h1>
           <p className="text-gray-300 text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
-            The complete system that transformed 500+ hobby newsletters into profitable businesses - without spending a penny on ads
+            The complete system that transformed 250+ hobby newsletters into profitable businesses - without spending a penny on ads
           </p>
           
           {/* Video Section */}
