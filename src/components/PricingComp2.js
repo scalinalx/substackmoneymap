@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Check, Shield, Zap, ChevronLeft, ChevronRight, ChevronDown, ChevronUp, ArrowDown } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import AccordionSection from './AccordionSection';
 import ResultsGallery from './ResultsGallery';
 import Testimonials2 from './Testimonials2';
 import Animated10KGrowth from './Animated10KGrowth';
 
 const PricingComp2 = () => {
+  const navigate = useNavigate();
   const [timeLeft, setTimeLeft] = useState({
     days: 2,
     hours: 14,
@@ -40,6 +42,10 @@ const PricingComp2 = () => {
 
     return () => clearInterval(timer);
   }, []);
+
+  const handleGetAccessClick = () => {
+    navigate('/checkout-step1');
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative">
@@ -111,9 +117,7 @@ const PricingComp2 = () => {
                 
                 <div className="text-center mt-8">
                   <button
-                    onClick={() => {
-                      document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
-                    }}
+                    onClick={handleGetAccessClick}
                     className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black bg-yellow-400 border border-transparent rounded-md hover:bg-yellow-500 transition-colors duration-200"
                   >
                     GET ACCESS
@@ -196,9 +200,7 @@ const PricingComp2 = () => {
                 
                 <div className="text-center mt-8">
                   <button
-                    onClick={() => {
-                      document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
-                    }}
+                    onClick={handleGetAccessClick}
                     className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black bg-yellow-400 border border-transparent rounded-md hover:bg-yellow-500 transition-colors duration-200"
                   >
                     GET ACCESS

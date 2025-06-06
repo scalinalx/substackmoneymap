@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import CountdownTimer from './components/CountdownTimer';
@@ -19,8 +20,10 @@ import OldVsNewWaySection from './components/OldVsNewWaySection';
 import ColdHardTruthSection from './components/ColdHardTruthSection';
 import FAQSection from './components/FAQSection';
 import FooterSection from './components/FooterSection';
+import CheckoutStep1 from './components/CheckoutStep1';
 
-function App() {
+// Main Landing Page Component
+const LandingPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <PricingComponent />
@@ -36,6 +39,17 @@ function App() {
       <FAQSection/>
       <FooterSection/>
     </div>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/checkout-step1" element={<CheckoutStep1 />} />
+      </Routes>
+    </Router>
   );
 }
 
