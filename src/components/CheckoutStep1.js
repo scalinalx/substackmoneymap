@@ -1,12 +1,33 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { supabase } from '../lib/supabase';
 
 const CheckoutStep1 = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     fullName: '',
     email: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+  // Get package from URL params
+  const selectedPackage = searchParams.get('package') || 'monthly';
+  
+  // Package details for display
+  const packageDetails = {
+    monthly: {
+      name: 'Newsletter Money Map Academy',
+      price: '$247/month',
+      description: 'Monthly subscription'
+    },
+    yearly: {
+      name: 'Newsletter Money Map VIP',
+      price: '$997/year',
+      description: 'Annual subscription (Save $1,967)'
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -16,12 +37,42 @@ const CheckoutStep1 = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can add your lead capture logic here
-    // For now, we'll just log the data
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      // Save to Supabase
+      const { data, error } = await supabase
+        .from('leads')
+        .insert([
+          {
+            full_name: formData.fullName,
+            email: formData.email,
+            package: selectedPackage,
+            checkout_status: 'lead_captured'
+          }
+        ])
+        .select();
+
+      if (error) {
+        console.error('Supabase error:', error);
+        setSubmitError('Something went wrong. Please try again.');
+        return;
+      }
+
+      console.log('Lead saved successfully:', data);
+      
+      // TODO: Redirect to Stripe checkout (Step 5)
+      alert('Form submitted successfully! (Next: Stripe integration)');
+      
+    } catch (error) {
+      console.error('Error saving lead:', error);
+      setSubmitError('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -41,6 +92,14 @@ const CheckoutStep1 = () => {
             </div>
           </div>
 
+          {/* Selected Package Display */}
+          <div className="mb-6 p-4 bg-yellow-400/10 border border-yellow-400/30 rounded-lg">
+            <div className="text-yellow-400 text-sm font-medium">Selected Plan</div>
+            <div className="text-white text-lg font-semibold">{packageDetails[selectedPackage].name}</div>
+            <div className="text-yellow-400 text-xl font-bold">{packageDetails[selectedPackage].price}</div>
+            <div className="text-gray-400 text-sm">{packageDetails[selectedPackage].description}</div>
+          </div>
+
           {/* Progress Indicator */}
           <div className="flex items-center justify-center mb-8">
             <div className="flex items-center gap-4">
@@ -57,6 +116,13 @@ const CheckoutStep1 = () => {
           <h1 className="text-white text-2xl font-semibold mb-2">Let's get started</h1>
           <p className="text-gray-400 text-sm mb-8">Just a few details</p>
 
+          {/* Error Message */}
+          {submitError && (
+            <div className="mb-6 p-3 bg-red-500/20 border border-red-500/50 rounded-lg">
+              <p className="text-red-400 text-sm">{submitError}</p>
+            </div>
+          )}
+
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Full Name Field */}
@@ -70,7 +136,8 @@ const CheckoutStep1 = () => {
                 value={formData.fullName}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200"
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200 disabled:opacity-50"
                 placeholder="Enter your full name"
               />
             </div>
@@ -86,7 +153,8 @@ const CheckoutStep1 = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200"
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-200 disabled:opacity-50"
                 placeholder="Enter your email address"
               />
             </div>
@@ -94,9 +162,10 @@ const CheckoutStep1 = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105"
+              disabled={isSubmitting}
+              className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
             >
-              Next
+              {isSubmitting ? 'Processing...' : 'Next'}
             </button>
           </form>
 
