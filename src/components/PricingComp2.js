@@ -47,6 +47,14 @@ const PricingComp2 = () => {
     navigate('/checkout-step1');
   };
 
+  const handleGetAccessClickMonthly = () => {
+    navigate('/checkout-step1?package=monthly');
+  };
+
+  const handleGetAccessClickYearly = () => {
+    navigate('/checkout-step1?package=yearly');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative">
       <style jsx>{`
@@ -117,7 +125,7 @@ const PricingComp2 = () => {
                 
                 <div className="text-center mt-8">
                   <button
-                    onClick={handleGetAccessClick}
+                    onClick={handleGetAccessClickMonthly}
                     className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black bg-yellow-400 border border-transparent rounded-md hover:bg-yellow-500 transition-colors duration-200"
                   >
                     GET ACCESS
@@ -200,7 +208,7 @@ const PricingComp2 = () => {
                 
                 <div className="text-center mt-8">
                   <button
-                    onClick={handleGetAccessClick}
+                    onClick={handleGetAccessClickYearly}
                     className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black bg-yellow-400 border border-transparent rounded-md hover:bg-yellow-500 transition-colors duration-200"
                   >
                     GET ACCESS
