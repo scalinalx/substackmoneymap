@@ -93,7 +93,12 @@ const NewsletterMonetizationCopy = () => {
               The complete system that shows you exactly how to implement these strategies, step by step.
             </p>
             
-            <button className="text-black font-bold py-4 px-12 rounded-lg text-xl transition-all duration-200 transform hover:scale-105 hover:opacity-90" style={{ backgroundColor: '#ffc300' }}>
+            <button 
+              onClick={() => {
+                document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-black font-bold py-4 px-12 rounded-lg text-xl transition-all duration-200 transform hover:scale-105 hover:opacity-90" style={{ backgroundColor: '#ffc300' }}
+            >
               DISCOVER THE MONEY MAP
             </button>
           </div>

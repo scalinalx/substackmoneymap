@@ -147,7 +147,12 @@ const GrowthStorySection = () => {
 
             {/* Bottom CTA */}
             <div className="text-center">
-              <button className="text-black font-bold py-4 px-12 rounded-lg text-xl transition-all duration-200 transform hover:scale-105 hover:opacity-90" style={{ backgroundColor: '#ffc300' }}>
+              <button 
+                onClick={() => {
+                  document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="text-black font-bold py-4 px-12 rounded-lg text-xl transition-all duration-200 transform hover:scale-105 hover:opacity-90" style={{ backgroundColor: '#ffc300' }}
+              >
                 LEARN MY EXACT STRATEGIES
               </button>
               <p className="text-gray-400 text-sm mt-4">

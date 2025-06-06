@@ -79,7 +79,12 @@ const WhoThisIsForSection = () => {
             <div className="absolute inset-0 rounded-lg blur-lg opacity-40" style={{ boxShadow: '0 0 30px #ffc300' }}></div>
             
             {/* Button */}
-            <button className="relative text-black font-bold py-4 px-12 rounded-lg text-xl transition-all duration-200 transform hover:scale-105 hover:opacity-90" style={{ backgroundColor: '#ffc300' }}>
+            <button 
+              onClick={() => {
+                document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="relative text-black font-bold py-4 px-12 rounded-lg text-xl transition-all duration-200 transform hover:scale-105 hover:opacity-90" style={{ backgroundColor: '#ffc300' }}
+            >
               GET INSTANT ACCESS TODAY
             </button>
           </div>
