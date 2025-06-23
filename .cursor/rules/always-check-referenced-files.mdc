@@ -1,0 +1,47 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: mandatory check of refereced files before ANY response
+globs:
+alwaysApply: true
+---
+
+# Rule: Always Check Referenced Files First
+
+## Critical Process Requirement
+
+**MANDATORY:** Before responding to ANY user request that contains file references using `@filename` or mentions specific files/rules, the AI MUST:
+
+1. **IMMEDIATELY** read and analyze ALL referenced files
+2. **UNDERSTAND** the complete requirements, rules, or context from those files  
+3. **APPLY** those specific guidelines to the response/task
+4. **NEVER** proceed with assumptions or default approaches when files are referenced
+
+## File Reference Patterns to Watch For:
+- `@filename.ext` 
+- `@rule-name.mdc`
+- `@component-name.js`
+- "based on [filename]"
+- "following [filename]"
+- "according to [filename]"
+
+## Mandatory Process:
+1. **STOP** - Do not generate any output yet
+2. **READ** - Use file reading tools to access all referenced files
+3. **ANALYZE** - Understand the requirements/rules completely  
+4. **PLAN** - Align your approach with those requirements
+5. **EXECUTE** - Generate output that follows those specific guidelines
+
+## No Exceptions:
+- Even if the request seems simple
+- Even if you think you know what to do
+- Even if the file seems unimportant
+- Even if you've seen similar requests before
+
+**THE USER'S REFERENCED FILES ALWAYS TAKE PRECEDENCE OVER DEFAULT AI APPROACHES**
+
+## Failure Protocol:
+If you proceed without checking referenced files, you have failed to follow this critical process requirement.

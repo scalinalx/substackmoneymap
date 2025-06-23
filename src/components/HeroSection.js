@@ -20,7 +20,7 @@ const HeroSection = () => {
         <span className="text-yellow-400">6-Figure Business</span> in 90 Days
       </h1>
       <p className="text-gray-300 text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
-        The complete system that transformed 500+ hobby newsletters into profitable businesses - without spending a penny on ads
+        The complete system that transformed 250+ hobby newsletters into profitable businesses - without spending a penny on ads
       </p>
       
       {/* Video Section */}

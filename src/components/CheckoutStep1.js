@@ -5,6 +5,11 @@ import { supabase } from '../lib/supabase';
 const CheckoutStep1 = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  
+  // Temporary debug - remove this after testing
+  console.log('Supabase URL:', process.env.REACT_APP_SUPABASE_URL);
+  console.log('Supabase Key exists:', !!process.env.REACT_APP_SUPABASE_ANON_KEY);
+  
   const [formData, setFormData] = useState({
     fullName: '',
     email: ''

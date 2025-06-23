@@ -153,7 +153,7 @@ const AccordionSection = () => {
           <span className="text-yellow-400 text-2xl">(Without Spending a Dime On Paid Ads)</span>
         </h1>
         <p className="text-gray-300 text-lg mb-4 max-w-4xl mx-auto leading-relaxed">
-          The complete system that transformed 500+ hobby newsletters into profitable businesses - without spending a penny on ads
+          The complete system that transformed 250+ hobby newsletters into profitable businesses - without spending a penny on ads
         </p>
         <Animated10KGrowth />
         <div className="flex items-center justify-center gap-2 mb-4">
